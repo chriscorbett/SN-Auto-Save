@@ -14,27 +14,28 @@
 
 setTimeout(autoSave,60000); // 5 Minutes (in milliseconds) 
 
-
-	
 } 
 
 function autoSave(){ 
 
 gsftSubmit(gel('sysverb_update_and_stay')); 
-target = document.getElementById('u_functionality_testing.u_long_description');
 
-sendCursorToEnd(target);
+target = g_form.getValue('u_long_description');
+//alert(target);	
+
+moveCursorToEnd(target);
 	
 } 
 
-function sendCursorToEnd(obj) { 
-var value = obj.value; //store the value of the element
-var message = "";
-if (value != "") {
-    message = value + "\n";
-}
-$(obj).focus().val(message);
-
+function moveCursorToEnd(el) {
+    if (typeof el.selectionStart == "number") {
+        el.selectionStart = el.selectionEnd = el.value.length;
+    } else if (typeof el.createTextRange != "undefined") {
+        el.focus();
+        var range = el.createTextRange();
+        range.collapse(false);
+        range.select();
+    }
 }
 
 
@@ -46,7 +47,7 @@ $(obj).focus().val(message);
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1bd19882db202200e96b59d0cf961900</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Auto Save</sys_name>
         <sys_overrides/>
         <sys_package display_value="Functionality Testing" source="de1f4802db202200e96b59d0cf9619c5">de1f4802db202200e96b59d0cf9619c5</sys_package>
@@ -55,7 +56,7 @@ $(obj).focus().val(message);
         <sys_scope display_value="Functionality Testing">de1f4802db202200e96b59d0cf9619c5</sys_scope>
         <sys_update_name>sys_script_client_1bd19882db202200e96b59d0cf961900</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-07-12 16:39:12</sys_updated_on>
+        <sys_updated_on>2016-07-12 17:39:07</sys_updated_on>
         <table>u_functionality_testing</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>
