@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Functionality Testing" max_length="40" name="u_functionality_testing" type="collection">
+        <element label="Long Description" max_length="2500" name="u_long_description" type="string"/>
+        <element label="Title" max_length="40" name="u_title" type="string"/>
+    </element>
+</database>

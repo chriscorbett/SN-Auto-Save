@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="" label="Functionality Testing" language="en" table="u_functionality_testing">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Functionality Testing</label>
+            <language>en</language>
+            <name>u_functionality_testing</name>
+            <plural>Functionality Testings</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2016-07-12 12:36:48</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>8f1f8842db202200e96b59d0cf961909</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Functionality Testing</sys_name>
+            <sys_package display_value="Functionality Testing" source="de1f4802db202200e96b59d0cf9619c5">de1f4802db202200e96b59d0cf9619c5</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Functionality Testing">de1f4802db202200e96b59d0cf9619c5</sys_scope>
+            <sys_update_name>sys_documentation_u_functionality_testing__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2016-07-12 12:36:48</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

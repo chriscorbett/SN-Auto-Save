@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>sys_created_on</field>
+        <global>true</global>
+        <messages/>
+        <name>Auto Save</name>
+        <order/>
+        <script><![CDATA[function onLoad(){ 
+
+setTimeout(autoSave,60000); // 5 Minutes (in milliseconds) 
+
+
+	
+} 
+
+function autoSave(){ 
+
+gsftSubmit(gel('sysverb_update_and_stay')); 
+target = document.getElementById('u_functionality_testing.u_long_description');
+
+sendCursorToEnd(target);
+	
+} 
+
+function sendCursorToEnd(obj) { 
+var value = obj.value; //store the value of the element
+var message = "";
+if (value != "") {
+    message = value + "\n";
+}
+$(obj).focus().val(message);
+
+}
+
+
+ ]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-07-12 12:51:37</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1bd19882db202200e96b59d0cf961900</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Auto Save</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Functionality Testing" source="de1f4802db202200e96b59d0cf9619c5">de1f4802db202200e96b59d0cf9619c5</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Functionality Testing">de1f4802db202200e96b59d0cf9619c5</sys_scope>
+        <sys_update_name>sys_script_client_1bd19882db202200e96b59d0cf961900</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-07-12 16:39:12</sys_updated_on>
+        <table>u_functionality_testing</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
